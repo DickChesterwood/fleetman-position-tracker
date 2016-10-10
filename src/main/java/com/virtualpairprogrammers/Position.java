@@ -16,7 +16,7 @@ public class Position implements Comparable<Position>
 	private BigDecimal lat;
 	private BigDecimal longitude;
 	
-    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="EEE MMM dd HH:mm:ss zzz yyyy", timezone="UTC")
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss.SSSZ", timezone="UTC")
 	private Date timestamp;
 	
 	public Position() {}

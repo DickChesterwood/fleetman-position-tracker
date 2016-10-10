@@ -12,11 +12,10 @@ public class MessageProcessor {
 	@Autowired
 	private Data data;
 	
-	@JmsListener(destination="positionQueue")
+	@JmsListener(destination="${fleetman.position.queue}")
 	public void processPositionMessageFromQueue(Map<String, String> incomingMessage ) 
 	{
 		data.updatePosition(incomingMessage);
-		System.out.println("received message " + incomingMessage);
 	}
 
 }
